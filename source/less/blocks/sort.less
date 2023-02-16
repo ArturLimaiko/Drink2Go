@@ -1,0 +1,92 @@
+.sort {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding-bottom: 36px;
+  gap: 20px;
+
+  @media (min-width: @tablet-width) {
+    grid-template-columns: repeat(3, 1fr);
+    padding-top: 20px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: @tablet-width) {
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+}
+
+.sort__range {
+  @media (min-width: @tablet-width) {
+    max-width: 220px;
+    padding-right: 20px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.sort__radio {
+  @media (min-width: @tablet-width) {
+    min-width: 210px;
+    padding-right: 40px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.sort__checkbox {
+  @media (min-width: @tablet-width) {
+    min-width: 197px;
+    padding-right: 38px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.sort__box {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0;
+  }
+}
+
+.sort__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: @base-black;
+}
+
+.sort__input {
+  font-weight: 500;
+  color: @base-black;
+}
+
+.sort__button {
+  gap: 24px;
+  justify-content: center;
+}
+
+.sort__select {
+  border-radius: 4px;
+  background-color: @lightest-grey;
+  text-align: right;
+  font-family: @accent-font;
+  font-style: normal;
+  padding: 4px 10px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: @base-primary;
+}
