@@ -18,3 +18,27 @@
 .main-nav__list a {
   color: @base-black;
 }
+
+.main-nav__list-item--current {
+  @media (min-width: @tablet-width) {
+    position: relative;
+  }
+}
+
+.main-nav__list-item--current a {
+  @media (min-width: @tablet-width) {
+    color: @base-primary;
+  }
+}
+
+.main-nav__list-item--current::after {
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    content: "";
+    width: 103px;
+    height: 2px;
+    background-color: @base-primary;
+    bottom: -36px;
+    left: -19px;
+  }
+}

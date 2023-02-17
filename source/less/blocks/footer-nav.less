@@ -1,13 +1,14 @@
-.footer-nav {
-  padding: 12px var(--side-offset) 20px;
-}
-
 .footer-nav__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.02em;
   color: @base-primary;
+  padding-bottom: 20px;
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 10px;
+  }
 }
 
 .footer-nav__item {
@@ -25,15 +26,44 @@
 }
 
 .footer-nav__adress {
+  position: relative;
+  padding-bottom: 16px;
+  margin-left: 20px;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
   color: @base-black;
 }
 
+.footer-nav__adress::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../img/footer-marker.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 13px;
+  height: 16px;
+  top: 2px;
+  left: -16px;
+}
+
 .footer-nav__phone {
+  position: relative;
+  margin-left: 20px;
   color: @base-black;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+}
+
+.footer-nav__phone::before {
+  position: absolute;
+  content: "";
+  background-image: url("../../img/footer-phone.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  width: 13px;
+  height: 16px;
+  top: 1px;
+  left: -16px;
 }

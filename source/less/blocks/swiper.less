@@ -1,0 +1,157 @@
+.swiper-slide {
+  position: relative;
+  padding: 12px var(--side-offset) 60px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: @flat-white;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: column-reverse;
+    align-items: center;
+    background: linear-gradient(180deg, #f3ebe1 648px, #ffffff 0);
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 30px;
+    padding-top: 30px;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &--lavender {
+    background: @lavender-latte;
+  }
+
+  &--espresso {
+    background: @espresso;
+  }
+}
+
+.swiper__box {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.swiper__container {
+  display: flex;
+  max-width: 230px;
+  margin: 0 auto;
+  padding-top: 20px;
+  align-items: center;
+
+  @media (min-width: @desktop-width) {
+    margin: 0;
+  }
+}
+
+.swiper__image {
+  @media (min-width: @tablet-width) {
+    background-color: transparent;
+  }
+}
+
+.swiper__title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 48px;
+  color: @base-black;
+  letter-spacing: 0.02em;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 80px;
+  }
+}
+
+.swiper__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  color: @base-black;
+  min-height: 100px;
+
+  @media (min-width: @tablet-width) {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+    min-height: 96px;
+    max-width: 608px;
+  }
+
+  @media (min-width: @desktop-width) {
+    max-width: 625px;
+    text-align: left;
+  }
+}
+
+.swiper__old-price {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 32px;
+  color: @base-primary;
+  padding-right: 6px;
+}
+
+.swiper__newprice {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 32px;
+  color: @base-black;
+  padding-right: 28px;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+  top: 3.5%;
+  height: 100%;
+  width: 20px;
+
+  @media (min-width: @tablet-width) {
+    width: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 6%;
+    height: 99%;
+  }
+}
+
+.swiper-button-prev {
+  left: -6px;
+}
+
+.swiper-button-next {
+  right: -6px;
+}
+
+.swiper .swiper-button-prev::after,
+.swiper .swiper-button-next::after {
+  color: #7859cf;
+  font-size: 21px;
+}
+
+.swiper-pagination {
+  width: 100%;
+  left: 0;
+}
+
+.swiper .swiper-pagination-bullet {
+  display: none;
+
+  @media (min-width: @desktop-width) {
+    display: inline-block;
+    width: 62px;
+    height: 4px;
+    background-color: @base-primary;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 0;
+  }
+}

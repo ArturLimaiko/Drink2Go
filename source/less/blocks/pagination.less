@@ -25,7 +25,24 @@
   background-repeat: no-repeat;
   background-position: center center;
 
-  @media (min-width: @desktop-width) {
+  &:hover,
+  &:focus {
+    color: @base-white;
+    background-color: @base-primary;
+    transition: 0.3s ease-in;
+    outline: none;
+  }
+
+  &:active {
+    background-color: @primary-darker;
+    transition: 0.3s ease-in;
+  }
+
+  &:disabled {
+    background-color: @light-grey;
+  }
+
+  @media (min-width: @tablet-width) {
     background-image: none;
     padding: 8px 20px;
     width: 91px;
@@ -42,7 +59,7 @@
 .pagination__up {
   rotate: calc(180deg);
 
-  @media (min-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     rotate: none;
     width: 104px;
     height: 40px;
@@ -63,6 +80,24 @@
   text-align: center;
   cursor: pointer;
 
+  &:hover,
+  &:focus {
+    background-color: @primary-lighter;
+    color: @base-white;
+    transition: 0.3s ease-in;
+    outline: none;
+  }
+
+  &:active {
+    color: @base-white;
+    background-color: @primary-darker;
+    transition: 0.3s ease-in;
+  }
+
+  &:disabled {
+    background-color: @light-grey;
+  }
+
   &--current {
     font-weight: 600;
     background-color: @lightest-grey;
@@ -74,7 +109,12 @@
 .pagination__text-up {
   display: none;
 
-  @media (min-width: @desktop-width) {
+  &:hover,
+  &:focus {
+    color: @base-white;
+  }
+
+  @media (min-width: @tablet-width) {
     display: block;
     color: @base-primary;
   }

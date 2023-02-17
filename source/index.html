@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <title>Drink2Go</title>
     <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="preload"
@@ -74,7 +78,9 @@
           </a>
           <span class="header__text-icon">Корзина</span>
         </div>
-        <nav class="main-nav main-nav--closed main-nav--opened">
+        <nav
+          class="main-nav main-nav--closed main-nav--opened main-nav__list--enabled"
+        >
           <button
             class="main-nav__toggle main-nav__toggle--no-js"
             type="button"
@@ -103,28 +109,161 @@
 
     <main class="main-container">
       <h1 class="page__hidden">Интернет-магазин кофейных напитков</h1>
-      <section class="slider">
-        <img
-          class="slider__image"
-          src="./img/flat_white_img.png"
-          width="280"
-          height="280"
-          alt="Декаф Флэт Уайт"
-        />
-        <div class="slider__box">
-          <span class="slider__slogan slogan">Новинка!</span>
-          <h1 class="slider__title">Декаф Флэт Уайт</h1>
-          <p class="slider__text">
-            Свежесваренный кофе без кофеина из Эфиопии с натуральным фермерским
-            молоком — то, что нужно для расслабления после тяжёлого рабочего дня
-          </p>
-          <div class="slider__container">
-            <span class="slider__old-price"><s>295</s></span>
-            <span class="slider__newprice">225₽</span>
-            <a class="slider__link button" type="button">Заказать</a>
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="" class="swiper__link">
+              <picture>
+                <source
+                  media="(min-width: 1400px)"
+                  srcset="
+                    ./img/flat-white-img-desktop.png,
+                    ./img/flat-white-img-desktop@2x.png 2x
+                  "
+                  width="600"
+                  height="600"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/flat-white-img-tablet.png,
+                    ./img/flat-white-img-tablet@2x.png 2x
+                  "
+                  width="476"
+                  height="476"
+                />
+                <img
+                  class="swiper__image"
+                  src="./img/flat-white-img.png"
+                  width="280"
+                  height="280"
+                  alt="Декаф Флэт Уайт"
+                  srcset="./img/flat-white-img@2x.png 2x"
+                />
+              </picture>
+            </a>
+            <div class="swiper__box">
+              <span class="swiper__slogan slogan">Новинка!</span>
+              <a href="" class="swiper__link">
+                <h1 class="swiper__title">Декаф Флэт Уайт</h1></a
+              >
+              <p class="swiper__text">
+                Свежесваренный кофе без кофеина из Эфиопии с натуральным
+                фермерским молоком — то, что нужно для расслабления после
+                тяжёлого рабочего дня
+              </p>
+              <div class="swiper__container">
+                <span class="swiper__old-price"><s>295₽</s></span>
+                <span class="swiper__newprice">225₽</span>
+                <button class="swiper__link button" type="button">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide--lavender">
+            <a href="" class="swiper__link">
+              <picture>
+                <source
+                  media="(min-width: 1400px)"
+                  srcset="
+                    ./img/lavender-desktop.png,
+                    ./img/lavender-desktop@2x.png 2x
+                  "
+                  width="600"
+                  height="600"
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/lavender-tablet.png,
+                    ./img/lavender-tablet@2x.png 2x
+                  "
+                  width="476"
+                  height="476"
+                />
+                <img
+                  class="swiper__image"
+                  src="./img/lavender-mobile.png"
+                  width="280"
+                  height="280"
+                  alt="Лавандовый Латте"
+                  srcset="./img/lavender-mobile@2x.png 2x"
+                />
+              </picture>
+            </a>
+            <div class="swiper__box">
+              <span class="swiper__slogan slogan">Новинка!</span>
+              <a href="" class="swiper__link">
+                <h1 class="swiper__title">Лавандовый Латте</h1>
+              </a>
+              <p class="swiper__text">
+                Невероятное сочетание перуанской высокогорной арабики с молоком
+                ламы и лавандовым сиропом унесёт вас прямо на вершину Радужных
+                гор
+              </p>
+              <div class="swiper__container">
+                <span class="swiper__old-price"><s>285₽</s></span>
+                <span class="swiper__newprice">265₽</span>
+                <button class="swiper__link button" type="button">
+                  Заказать
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide swiper-slide--espresso">
+            <a href="" class="swiper__link">
+              <picture>
+                <source
+                  media="(min-width: 1440px)"
+                  srcset="
+                    img/espresso-desktop.png,
+                    img/espresso-desktop@2x.png 2x
+                  "
+                />
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    img/espresso-tablet.png,
+                    img/espresso-tablet@2x.png 2x
+                  "
+                />
+                <img
+                  class="swiper__image"
+                  src="img/espresso-mobile.png"
+                  srcset="img/espresso-mobile@2x.png 2x"
+                  width="280"
+                  height="280"
+                  alt="Тройной Эспрессо"
+                />
+              </picture>
+            </a>
+            <div class="swiper__box">
+              <span class="swiper__slogan slogan">Новинка!</span>
+              <a href="" class="swiper__link">
+                <h1 class="swiper__title">Тройной Эспрессо</h1>
+              </a>
+              <p class="swiper__text">
+                Мощнее укола адреналина, чернее самой тёмной ночи, этот тройной
+                эспрессо из Колумбии покажет вам, что такое настоящая бодрость
+              </p>
+              <div class="swiper__container">
+                <span class="swiper__old-price"><s>395₽</s></span>
+                <span class="swiper__newprice">375₽</span>
+                <button class="swiper__link button" type="button">
+                  Заказать
+                </button>
+              </div>
+            </div>
           </div>
         </div>
-      </section>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
 
       <!-- Преимущества -->
       <section class="features">
@@ -137,13 +276,13 @@
               Готовый напиток всегда под рукой — просто открой банку
             </p>
           </li>
-          <li class="features__item features__item-ease">
+          <li class="features__item features__item-easy">
             <h3 class="features__subtitle">Удобство</h3>
             <p class="features__text">
               Легко помещается и в карман, и в маленькую сумочку
             </p>
           </li>
-          <li class="features__item features__item-fresh">
+          <li class="features__item features__item-energy">
             <h3 class="features__subtitle">Бодрость</h3>
             <p class="features__text">
               Сбалансированная доза кофеина даст мощный заряд энергии
@@ -166,56 +305,45 @@
         </div>
 
         <div class="catalog__box">
+          <div class="sort__range">
+            <p class="sort__title">Цена</p>
+            <div class="sort__swiper">
+              <div class="sort__progress"></div>
+            </div>
+            <div class="sort__toggle">
+              <input
+                type="range"
+                class="sort__button-min"
+                min="0"
+                max="1000"
+                value="0"
+              />
+              <input
+                type="range"
+                class="sort__button-max"
+                min="0"
+                max="1000"
+                value="900"
+              />
+            </div>
+            <div class="sort__input">
+              <div class="sort__field">
+                <span class="page__hidden">Минимальная цена</span>
+                <input class="sort__min" type="number" value="0" />
+              </div>
+              <div class="sort__separator">-</div>
+              <div class="sort__field">
+                <span class="page__hidden">Максимальная цена</span>
+                <input class="sort__max" type="number" value="900" />
+              </div>
+            </div>
+          </div>
           <form
             class="sort"
             action="https://echo.htmlacademy.ru/"
             method="post"
           >
-            <div class="catalog__wrapper">
-              <div class="sort__range">
-                <div class="sort__title">Цена</div>
-                <div class="sort__controls">
-                  <div class="sort__scale">
-                    <div class="sort__bar">
-                      <button
-                        class="sort__range-toggle sort__range-toggle--min"
-                        type="button"
-                      >
-                        <span class="page__hidden"
-                          >Изменить минимальную цену.</span
-                        >
-                      </button>
-                      <button
-                        class="sort__range-toggle sort__range-toggle--max"
-                        type="button"
-                      >
-                        <span class="page__hidden"
-                          >Изменить максимальную цену.</span
-                        >
-                      </button>
-                    </div>
-                  </div>
-                </div>
-                <div class="sort__controls">
-                  <label class="sort__min-price">
-                    <input
-                      class="sort__input"
-                      type="number"
-                      name="min-price"
-                      value="0"
-                    />
-                  </label>
-                  <label class="sort__max-price">
-                    <input
-                      class="sort__input"
-                      type="number"
-                      name="max-price"
-                      value="900"
-                    />
-                  </label>
-                </div>
-              </div>
-            </div>
+            <div class="catalog__wrapper"></div>
 
             <!-- Radio Button -->
             <fieldset class="sort__radio radio">
@@ -226,29 +354,24 @@
                     <input
                       class="radio__input"
                       type="radio"
-                      name="Неважно"
+                      name="name"
                       checked
                     />
+                    <span class="radio__custom"></span>
                     <span class="radio__text">Неважно </span>
                   </label>
                 </li>
                 <li class="radio__item">
                   <label class="radio__control">
-                    <input
-                      class="radio__input"
-                      type="radio"
-                      name="Только животное"
-                    />
+                    <input class="radio__input" type="radio" name="name" />
+                    <span class="radio__custom"></span>
                     <span class="radio__text">Только животное </span>
                   </label>
                 </li>
                 <li class="radio__item">
                   <label class="radio__control">
-                    <input
-                      class="radio__input"
-                      type="radio"
-                      name="Только растительное"
-                    />
+                    <input class="radio__input" type="radio" name="name" />
+                    <span class="radio__custom"></span>
                     <span class="radio__text">Только растительное </span>
                   </label>
                 </li>
@@ -257,9 +380,10 @@
                     <input
                       class="radio__input"
                       type="radio"
-                      name="Без молока"
+                      name="name"
                       disabled
                     />
+                    <span class="radio__custom"></span>
                     <span class="radio__text">Без молока </span>
                   </label>
                 </li>
@@ -317,6 +441,7 @@
                       class="checkbox__input"
                       type="checkbox"
                       name="Перу"
+                      disabled
                     />
                     <span class="checkbox__text">Перу</span>
                   </label>
@@ -337,7 +462,7 @@
             <div class="sort__container">
               <h3 class="sort__title">Сортировка:</h3>
               <select class="sort__select" aria-label="Сортировка">
-                <option value="default">По умолчанию</option>
+                <option value="default">по умолчанию</option>
                 <option value="expensive">сначала дорогие</option>
                 <option value="cheap">сначала дешёвые</option>
                 <option value="high rate">высокий рейтинг</option>
@@ -468,10 +593,7 @@
                 <a class="pagination__link" href="#">1</a>
               </li>
               <li class="pagination__item">
-                <a
-                  type="button"
-                  class="pagination__link pagination__link--current"
-                  href="#"
+                <a class="pagination__link pagination__link--current" href="#"
                   >2</a
                 >
               </li>
@@ -593,6 +715,7 @@
         </div>
       </footer>
     </main>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
     <script src="./js/script.js" defer></script>
   </body>
 </html>

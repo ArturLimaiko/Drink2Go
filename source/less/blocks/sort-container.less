@@ -1,6 +1,8 @@
 .sort__container {
   display: flex;
   justify-content: space-between;
+  padding-top: 30px;
+  align-items: center;
 
   @media (min-width: @tablet-width) {
     padding-top: 44px;
@@ -8,4 +10,24 @@
     gap: 10px;
     align-items: center;
   }
+}
+
+.sort__title {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: @base-black;
+}
+
+.sort__select {
+  font-family: @accent-font;
+  font-style: normal;
+  padding: 10px 4px;
+  max-width: 165px;
+  border-radius: 4px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: @base-primary;
 }

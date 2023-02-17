@@ -8,6 +8,22 @@
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: @primary-lighter;
+    transition: 0.3s ease-in;
+    outline: none;
+  }
+
+  &:active {
+    background-color: @primary-darker;
+  }
+
+  &:disabled {
+    background-color: @base-grey;
+  }
 }
 
 .button--apply {
@@ -32,6 +48,16 @@
   background-color: @base-white;
   padding: 11px 16.5px;
 
+  &:hover,
+  &:focus {
+    color: @base-white;
+    transition: 0.3s ease-in;
+  }
+
+  &:disabled {
+    color: @base-white;
+  }
+
   @media (min-width: @tablet-width) {
     font-weight: 400;
     font-size: 14px;
@@ -41,8 +67,21 @@
 }
 
 .button--card {
+  position: relative;
   padding: 8px 20px 8px 46px;
   font-weight: 400;
   font-size: 14px;
   line-height: 20px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    background-image: url("../../img/basket-button.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    top: 9px;
+    left: 18px;
+    width: 20px;
+    height: 16px;
+  }
 }
