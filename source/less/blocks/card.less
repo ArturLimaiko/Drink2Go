@@ -5,19 +5,15 @@
   padding-top: 30px;
 
   @media (min-width: @tablet-width) {
-    flex-direction: row;
-    flex-wrap: wrap;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
-    padding-top: 30px;
-    padding-bottom: 70px;
-    justify-content: center;
   }
+}
 
-  @media (min-width: @desktop-width) {
-    width: 1080px;
-    margin: 0;
-  }
+@media (min-width: @desktop-width) {
+  width: 1080px;
+  margin: 0;
 }
 
 .card__item {
@@ -28,7 +24,7 @@
   align-items: center;
 
   @media (min-width: @tablet-width) {
-    max-width: 298px;
+    padding-top: 50px;
   }
 }
 
@@ -41,6 +37,7 @@
   @media (min-width: @tablet-width) {
     font-size: 24px;
     line-height: 36px;
+    padding-top: 30px;
   }
 }
 
@@ -49,6 +46,10 @@
   font-size: 14px;
   line-height: 20px;
   color: @base-black;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 10px;
+  }
 }
 
 .card__box {
@@ -56,6 +57,10 @@
   justify-content: space-between;
   gap: 48px;
   align-items: center;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 20px;
+  }
 }
 
 .card__price {

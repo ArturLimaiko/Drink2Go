@@ -5,20 +5,7 @@
   flex-direction: column;
   text-align: center;
   align-items: center;
-  background-color: @flat-white;
-
-  @media (min-width: @tablet-width) {
-    flex-direction: column-reverse;
-    align-items: center;
-    background: linear-gradient(180deg, #f3ebe1 648px, #ffffff 0);
-  }
-
-  @media (min-width: @desktop-width) {
-    gap: 30px;
-    padding-top: 30px;
-    flex-direction: row;
-    align-items: center;
-  }
+  background: @flat-white;
 
   &--lavender {
     background: @lavender-latte;
@@ -26,6 +13,39 @@
 
   &--espresso {
     background: @espresso;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding: 12px var(--side-offset) 40px;
+    flex-direction: column-reverse;
+    align-items: center;
+    background: linear-gradient(180deg, @flat-white 585px, @base-white 0);
+  }
+
+  @media (min-width: @tablet-width) {
+    &--lavender {
+      background: linear-gradient(180deg, @lavender-latte 585px, @base-white 0);
+    }
+
+    &--espresso {
+      background: linear-gradient(180deg, @espresso 585px, @base-white 0);
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 30px;
+    flex-direction: row;
+    align-items: center;
+    min-height: 714px;
+    background: linear-gradient(180deg, @flat-white 714px, @base-white 0);
+
+    &--lavender {
+      background: linear-gradient(180deg, @lavender-latte 714px, @base-white 0);
+    }
+
+    &--espresso {
+      background: linear-gradient(180deg, @espresso 714px, @base-white 0);
+    }
   }
 }
 
@@ -52,6 +72,13 @@
 .swiper__image {
   @media (min-width: @tablet-width) {
     background-color: transparent;
+    width: 476px;
+    height: auto;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 600px;
+    height: auto;
   }
 }
 
@@ -114,20 +141,21 @@
 
   @media (min-width: @tablet-width) {
     width: 80px;
+    top: -11.5%;
   }
 
   @media (min-width: @desktop-width) {
-    top: 6%;
+    top: 3%;
     height: 99%;
   }
 }
 
 .swiper-button-prev {
-  left: -6px;
+  left: -2px;
 }
 
 .swiper-button-next {
-  right: -6px;
+  right: -2px;
 }
 
 .swiper .swiper-button-prev::after,
@@ -153,5 +181,12 @@
     font-size: 14px;
     text-align: center;
     border-radius: 0;
+    bottom: 40px;
+  }
+}
+
+.swiper .swiper-pagination-bullets {
+  @media (min-width: @desktop-width) {
+    bottom: 46px;
   }
 }
