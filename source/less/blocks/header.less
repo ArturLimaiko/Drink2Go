@@ -92,3 +92,34 @@
 .header__basket {
   padding: 20px;
 }
+
+.header__user-basket,
+.header__user-icon {
+  position: relative;
+  fill: @base-black;
+}
+
+.header__user:hover::before,
+.header__basket:focus::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 137px;
+  width: 60px;
+  height: 60px;
+  background-color: @base-secondary;
+  border-radius: 4px;
+  z-index: -1;
+}
+
+.header__basket:hover::before {
+  content: "";
+  position: absolute;
+  top: 1px;
+  right: 80px;
+  width: 60px;
+  height: 60px;
+  background-color: @base-secondary;
+  border-radius: 4px;
+  z-index: -1;
+}
