@@ -3,12 +3,19 @@
   justify-content: space-between;
   padding-top: 30px;
   align-items: center;
+  flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
     padding-top: 44px;
     justify-content: flex-end;
     gap: 10px;
     align-items: center;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    top: 22px;
+    right: -2px;
   }
 }
 

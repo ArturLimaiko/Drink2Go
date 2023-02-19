@@ -1,26 +1,8 @@
-.filter-list {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-.filter-title {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 26px;
-  margin: 0;
-  padding: 0;
-  margin-bottom: 28px;
-}
-
-.control-label {
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 21px;
-}
-
-.filter-item:not(:last-child) {
-  margin-bottom: 8px;
+.filter {
+  @media (min-width: @desktop-width) {
+    padding-bottom: 91px;
+    padding-top: 25px;
+  }
 }
 
 .filter-wrapper-inputs {
@@ -44,10 +26,6 @@
   position: relative;
 }
 
-.catalog-filter-label:hover {
-  z-index: 1;
-}
-
 .price-input::-webkit-outer-spin-button,
 .price-input::-webkit-inner-spin-button {
   margin: 0;
@@ -56,33 +34,21 @@
 
 /* Состояния инпутов */
 
-.price-input:hover {
-  border-color: #abb0b3;
-}
-
 .price-input:focus {
-  box-shadow: 0 0 0 3px #81b3d2, inset 0 0 0 3px #81b3d2;
   outline: none;
   z-index: 2;
-  border-color: #ffffff;
-}
-
-.price-input:active {
-  background: #756257;
-  box-shadow: none;
+  border-color: @primary-darker;
 }
 
 .price-input:disabled:hover,
 .price-input:disabled:active,
 .price-input:disabled {
-  color: #161414;
-  background-color: #f2f2f2;
-  opacity: 0.5;
-  border: none;
+  background-color: @lightest-grey;
+  border: 2px solid @light-grey;
 }
 
 .price-input::placeholder {
-  color: @base-black;
+  color: @base-grey;
 }
 
 /* Инпуты фильтра гостиниц */
@@ -94,7 +60,7 @@
   border: 2px solid @primary-lighter;
   border-radius: 4px;
   background-color: @base-white;
-  color: @base-grey;
+  color: @base-black;
   font-family: @accent-font;
   font-weight: 500;
   font-size: 16px;
@@ -103,6 +69,10 @@
 
   @media (min-width: @tablet-width) {
     width: 92px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 134px;
   }
 }
 
@@ -130,11 +100,6 @@
   }
 }
 
-.range-bar-opacity {
-  height: 4px;
-  background: #000000;
-}
-
 .range-bar {
   position: absolute;
   height: 4px;
@@ -156,21 +121,21 @@
   cursor: pointer;
 }
 
+.range-toggle:hover,
 .range-toggle:focus {
-  border: 3px solid #83b3d3;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-  border-radius: 5px;
+  border: 2px solid #ffffff;
+  background-color: rgba(120, 89, 207, 0.5);
+  border-radius: 50%;
+  outline: 2px solid @primary-lighter;
+  z-index: 1;
 }
 
-.range-toggle:hover {
-  background-color: #e5e5e5;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
-}
 
 .range-toggle:active {
-  border: 2px solid #83b3d3;
-  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.4);
-  border-radius: 5px;
+  border: 2px solid #ffffff;
+  background-color: @base-primary;
+  border-radius: 50%;
+  outline: 2px solid @primary-lighter;
 }
 
 .toggle-min {

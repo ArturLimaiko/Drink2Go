@@ -33,7 +33,7 @@
   }
 
   @media (min-width: @desktop-width) {
-    gap: 30px;
+    gap: 26px;
     flex-direction: row;
     align-items: center;
     min-height: 714px;
@@ -59,7 +59,8 @@
 
 .swiper__container {
   display: flex;
-  max-width: 230px;
+  width: 230px;
+  height: 100%;
   margin: 0 auto;
   padding-top: 20px;
   align-items: center;
@@ -141,12 +142,13 @@
 
   @media (min-width: @tablet-width) {
     width: 80px;
-    top: -11.5%;
+    top: 2.5%;
+    height: 640px;
   }
 
   @media (min-width: @desktop-width) {
     top: 3%;
-    height: 99%;
+    height: 714px;
   }
 }
 
@@ -164,6 +166,50 @@
   font-size: 21px;
 }
 
+.swiper-button-prev:hover,
+.swiper-button-prev:focus {
+  background: linear-gradient(
+    90deg,
+    @base-white 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.swiper-button-next:hover,
+.swiper-button-next:focus {
+  background: linear-gradient(
+    270deg,
+    @base-white 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.swiper-button-prev:active {
+  background: linear-gradient(
+    90deg,
+    rgba(120, 89, 207, 0.25) 0%,
+    rgba(120, 89, 207, 0) 100%
+  );
+}
+
+.swiper-button-next:active {
+  background: linear-gradient(
+    270deg,
+    rgba(120, 89, 207, 0.25) 0%,
+    rgba(120, 89, 207, 0) 100%
+  );
+}
+
+.swiper-button-prev:disabled,
+.swiper-button-next:disabled {
+  background: @base-grey;
+}
+
+.swiper-button-prev:disabled::after,
+.swiper-button-next:disabled::after {
+  color: @base-grey;
+}
+
 .swiper-pagination {
   width: 100%;
   left: 0;
@@ -176,7 +222,7 @@
     display: inline-block;
     width: 62px;
     height: 4px;
-    background-color: @base-primary;
+    background-color: @base-white;
     line-height: 20px;
     font-size: 14px;
     text-align: center;
@@ -189,4 +235,13 @@
   @media (min-width: @desktop-width) {
     bottom: 46px;
   }
+}
+
+.swiper-pagination-bullet:hover,
+.swiper-pagination-bullet:focus {
+  background: @primary-opacity;
+}
+
+.swiper-pagination-bullet:active {
+  background: @base-primary;
 }

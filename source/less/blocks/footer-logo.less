@@ -15,6 +15,27 @@
   }
 }
 
+.footer-logo__html {
+  fill: @base-grey;
+
+  &:hover {
+    fill: @base-primary;
+  }
+
+  &:active {
+    fill: @primary-darker;
+  }
+}
+
+.footer-logo__link:hover .footer-logo__text,
+.footer-logo__link:focus .footer-logo__text {
+  color: @base-primary;
+}
+
+.footer-logo__link:active .footer-logo__text {
+  color: @primary-darker;
+}
+
 .footer-logo__link {
   display: flex;
   gap: 2px;

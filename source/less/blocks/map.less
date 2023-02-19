@@ -45,3 +45,15 @@
     height: 540px;
   }
 }
+
+.map__no-js {
+  display: block;
+  background-image: url("../../img/map-tablet.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @media (min-width: @tablet-width) {
+    background-image: url("../../img/map-desktop.png");
+  }
+}

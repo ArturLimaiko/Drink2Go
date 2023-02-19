@@ -10,6 +10,11 @@
     padding-top: 20px;
     padding-bottom: 40px;
   }
+
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 .sort__range {
@@ -67,6 +72,11 @@
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    gap: 30px;
+    gap: 18px;
+    grid-column: 1/4;
+  }
+
+  @media (min-width: @desktop-width) {
+    gap: 16px;
   }
 }

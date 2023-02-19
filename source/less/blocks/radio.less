@@ -20,6 +20,7 @@
   font-size: 16px;
   line-height: 24px;
   color: @base-black;
+  cursor: pointer;
 }
 
 .radio__item {
@@ -63,16 +64,45 @@
 
 .radio__input:checked + .radio__custom::before {
   transform: translate(-50%, -50%) scale(1);
+  cursor: pointer;
 }
 
 .radio__input:not(:disabled):hover + .radio__custom,
 .radio__input:not(:disabled):focus + .radio__custom,
 .radio__input:not(:disabled):focus-visible + .radio__custom {
   border-color: @base-primary;
+  cursor: pointer;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 16px;
+    height: 16px;
+    background-color: @primary-opacity;
+    border-radius: 50%;
+  }
 }
 
 .radio__input:disabled + .radio__custom,
 .radio__input:disabled ~ .radio__text {
   border-color: @light-grey;
   color: @base-grey;
+}
+
+.radio__input[type="radio"]:checked:disabled + .radio__custom {
+  border: 2px solid @light-grey;
+}
+
+.radio__input[type="radio"]:checked:disabled + .radio__custom::before {
+  background-color: @light-grey;
+  top: 50%;
+  left: 50%;
+}
+
+.radio__input:disabled + .radio__custom,
+.radio__input:disabled + .radio__text {
+  border: @base-grey;
+  color: @base-black;
 }

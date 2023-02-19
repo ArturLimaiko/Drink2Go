@@ -9,11 +9,13 @@
     grid-template-columns: repeat(2, 1fr);
     gap: 30px;
   }
-}
 
-@media (min-width: @desktop-width) {
-  width: 1080px;
-  margin: 0;
+  @media (min-width: @desktop-width) {
+    width: 1011px;
+    margin: 0;
+    padding-top: 94px;
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .card__item {
@@ -25,6 +27,10 @@
 
   @media (min-width: @tablet-width) {
     padding-top: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 317px;
   }
 }
 
@@ -55,8 +61,8 @@
 .card__box {
   display: flex;
   justify-content: space-between;
-  gap: 48px;
   align-items: center;
+  flex-wrap: wrap;
 
   @media (min-width: @tablet-width) {
     padding-top: 20px;
@@ -68,4 +74,5 @@
   font-size: 20px;
   line-height: 32px;
   color: @base-black;
+  padding-right: 30px;
 }

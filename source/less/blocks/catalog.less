@@ -3,7 +3,7 @@
   background-color: @lightest-grey;
 
   @media (min-width: @tablet-width) {
-    padding: 80px var(--side-offset) 20px;
+    padding: 80px 40px 20px;
   }
 }
 
@@ -23,10 +23,20 @@
   line-height: 36px;
   color: @base-black;
 
-
   @media (min-width: @tablet-width) {
     font-weight: 700;
     font-size: 42px;
     line-height: 64px;
+  }
+}
+
+.catalog__container {
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 318px 1fr;
+    position: relative;
+    padding-top: 40px;
+    justify-content: flex-start;
+    gap: 20px;
   }
 }
