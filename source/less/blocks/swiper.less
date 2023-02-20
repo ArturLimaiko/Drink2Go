@@ -67,6 +67,7 @@
 
   @media (min-width: @desktop-width) {
     margin: 0;
+    width: 100%;
   }
 }
 
@@ -94,6 +95,7 @@
     font-weight: 700;
     font-size: 56px;
     line-height: 80px;
+    max-width: 625px;
   }
 }
 
@@ -110,6 +112,7 @@
     line-height: 32px;
     min-height: 96px;
     max-width: 608px;
+    margin: 0 auto;
   }
 
   @media (min-width: @desktop-width) {
@@ -182,6 +185,10 @@
     @base-white 0%,
     rgba(255, 255, 255, 0) 100%
   );
+}
+
+.swiper [aria-disabled="true"]::after {
+  color: #ffffff;
 }
 
 .swiper-button-prev:active {

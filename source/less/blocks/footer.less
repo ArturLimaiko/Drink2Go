@@ -7,7 +7,7 @@
 
   @media (min-width: @desktop-width) {
     display: grid;
-    grid-template-columns: auto;
+    grid-template-columns: repeat(4, 1fr);
   }
 }
 
@@ -75,5 +75,6 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 30px;
+    grid-column: 2/5;
   }
 }

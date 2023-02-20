@@ -85,6 +85,10 @@
   }
 }
 
+.radio__input[type="radio"]:not(:disabled):checked + .radio__custom {
+  border: 2px solid @base-primary;
+}
+
 .radio__input:disabled + .radio__custom,
 .radio__input:disabled ~ .radio__text {
   border-color: @light-grey;
@@ -103,6 +107,6 @@
 
 .radio__input:disabled + .radio__custom,
 .radio__input:disabled + .radio__text {
-  border: @base-grey;
+  border: 2px solid @base-grey;
   color: @base-black;
 }

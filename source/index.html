@@ -326,37 +326,36 @@
             action="https://echo.htmlacademy.ru/"
             method="post"
           >
-            <div class="catalog__box">
-              <div class="filter filter-price">
-                <p class="catalog-filter-title">Цена:</p>
-                <div class="range-scale">
-                  <div class="range-bar">
-                    <button class="range-toggle toggle-min" type="button">
+              <div class="sort-filter">
+                <p class="sort-filter__text">Цена:</p>
+                <div class="sort-filter__range">
+                  <div class="sort-filter__bar">
+                    <button class="sort-filter__toggle toggle-min" type="button">
                       <span class="page__hidden"
                         >Изменить минимальную цену.</span
                       >
                     </button>
-                    <button class="range-toggle toggle-max" type="button">
+                    <button class="sort-filter__toggle toggle-max" type="button">
                       <span class="page__hidden"
                         >Изменить максимальную цену.</span
                       >
                     </button>
                   </div>
-                  <div class="range">
-                    <div class="filter-wrapper-inputs">
-                      <label class="catalog-filter-label">
+                  <div class="sort-filter__scale">
+                    <div class="sort-filter__wrapper">
+                      <label class="sort-filter__label">
                         <input
-                          class="price-input price-input-before"
+                          class="sort-filter__input price-input-before"
                           type="number"
                           placeholder="0"
                           name="min-price"
                           min="0"
                         />
                       </label>
-                      <span class="price-input-text">-</span>
-                      <label class="catalog-filter-label">
+                      <span class="sort-filter__dash">-</span>
+                      <label class="sort-filter__label">
                         <input
-                          class="price-input price-input-after"
+                          class="sort-filter__input price-input-after"
                           type="number"
                           placeholder="900"
                           name="max-price"
@@ -367,7 +366,6 @@
                   </div>
                 </div>
               </div>
-            </div>
             <!-- Radio Button -->
             <fieldset class="sort__radio radio">
               <legend class="radio__title">Наличие молока</legend>
