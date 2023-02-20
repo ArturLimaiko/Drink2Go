@@ -1,4 +1,28 @@
-.footer-nav__title {
+.footer-media {
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+  }
+
+  @media (min-width: @desktop-width) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    grid-column: 2/5;
+  }
+}
+
+.footer-media__nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @media (min-width: @desktop-width) {
+    margin-left: 30px;
+  }
+}
+
+.footer-media__title {
   font-weight: 700;
   font-size: 14px;
   line-height: 20px;
@@ -11,7 +35,7 @@
   }
 }
 
-.footer-nav__item {
+.footer-media__item {
   font-weight: 500;
   font-size: 12px;
   line-height: 16px;
@@ -21,11 +45,11 @@
   color: @base-black;
 }
 
-.footer-nav__item a {
+.footer-media__item a {
   color: @base-black;
 }
 
-.footer-nav__adress {
+.footer-media__adress {
   position: relative;
   padding-bottom: 16px;
   margin-left: 20px;
@@ -35,7 +59,7 @@
   color: @base-black;
 }
 
-.footer-nav__adress::before {
+.footer-media__adress::before {
   position: absolute;
   content: "";
   background-image: url("../../img/footer-marker.svg");
@@ -47,7 +71,7 @@
   left: -16px;
 }
 
-.footer-nav__phone {
+.footer-media__phone {
   position: relative;
   margin-left: 20px;
   color: @base-black;
@@ -56,7 +80,7 @@
   line-height: 20px;
 }
 
-.footer-nav__phone::before {
+.footer-media__phone::before {
   position: absolute;
   content: "";
   background-image: url("../../img/footer-phone.svg");
@@ -68,42 +92,11 @@
   left: -16px;
 }
 
-.footer-nav__link:hover,
-.footer-nav__link:focus {
+.footer-media__link:hover,
+.footer-media__link:focus {
   color: @primary-lighter;
 }
 
-.footer-nav__link:active {
+.footer-media__link:active {
   color: @primary-darker;
-}
-
-.footer__link-vk,
-.footer__link-ok,
-.footer__link-pinterest {
-  fill: @base-grey;
-}
-
-.footer__link:hover,
-.footer__link:focus {
-  fill: @base-primary;
-  background-color: @base-secondary;
-  border-radius: 4px;
-}
-
-.footer__link:hover .footer__link-vk,
-.footer__link:hover .footer__link-pinterest,
-.footer__link:hover .footer__link-ok {
-  fill: @base-primary;
-}
-
-.footer__link:focus .footer__link-vk,
-.footer__link:focus .footer__link-pinterest,
-.footer__link:focus .footer__link-ok {
-  fill: @base-primary;
-}
-
-.footer__link:active {
-  background-color: @primary-opacity;
-  fill: @base-primary;
-  border-radius: 4px;
 }
