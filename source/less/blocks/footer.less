@@ -1,13 +1,14 @@
 .footer {
-  padding: 20px 20px;
+  padding: 18px 20px;
 
   @media (min-width: @tablet-width) {
-    padding: 40px var(--side-offset) 20px;
+    padding: 40px 20px 20px;
   }
 
   @media (min-width: @desktop-width) {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    padding: 29px 20px 25px;
   }
 }
 
@@ -16,17 +17,14 @@
   justify-content: space-between;
   align-items: center;
 
-  @media (min-width: @tablet-width) {
-    padding-bottom: 32px;
-  }
-
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: column;
     padding-bottom: 0;
     justify-content: unset;
-    padding-top: 10px;
+    padding-top: 9px;
     align-items: flex-start;
+    margin-left: 19px;
   }
 }
 
@@ -77,8 +75,12 @@
 .footer__social {
   display: flex;
   margin-left: 10px;
-  gap: 20px;
   align-items: center;
+  gap: 19px;
+
+  @media (min-width: @tablet-width) {
+    gap: 20px;
+  }
 
   @media (min-width: @desktop-width) {
     padding-top: 50px;

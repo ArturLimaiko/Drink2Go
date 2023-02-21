@@ -7,7 +7,7 @@
 
   @media (min-width: @tablet-width) {
     display: flex;
-    justify-content: space-around;
+    padding: 0;
   }
 }
 
@@ -29,7 +29,7 @@
 
   @media (min-width: @desktop-width) {
     display: block;
-    margin-left: 20px;
+    margin-left: -14px;
     max-width: 160px;
     font-weight: 400;
     font-size: 12px;
@@ -63,18 +63,31 @@
 .header__wrapper {
   display: flex;
   align-items: center;
-  margin-left: 88px;
+  margin-left: 37px;
+  margin-top: 0;
+  gap: 3px;
 
   @media (min-width: @tablet-width) {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
     flex-wrap: wrap;
   }
 
   @media (min-width: @desktop-width) {
-    gap: 20px;
+    gap: 18px;
+    margin-left: 162px;
+    margin-top: 0;
+  }
+}
+
+.header__logo {
+  padding-top: 4px;
+  margin-right: 53px;
+  margin-left: 1px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 40px;
   }
 }
 

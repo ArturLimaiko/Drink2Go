@@ -28,7 +28,6 @@
     display: flex;
     position: unset;
     flex-direction: row;
-    flex-wrap: wrap;
   }
 }
 
@@ -50,8 +49,8 @@
   background-repeat: no-repeat;
   background-color: #ffffff;
   background-image: url("../../img/close-button.svg");
-  right: 27px;
-  top: 21px;
+  right: 22px;
+  top: 22px;
   cursor: pointer;
   border: none;
 
@@ -99,6 +98,32 @@
   }
 }
 
+.main-nav__list-item:nth-child(1) {
+  margin-left: 33px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 128px;
+  }
+}
+
+.main-nav__list-item:nth-child(2) {
+  @media (min-width: @tablet-width) {
+    margin-left: 20px;
+  }
+}
+
+.main-nav__list-item:nth-child(3) {
+  @media (min-width: @tablet-width) {
+    margin-left: 20px;
+  }
+}
+
+.main-nav__list-item:nth-child(4) {
+  @media (min-width: @tablet-width) {
+    margin-left: 20px;
+  }
+}
+
 .main-nav__list-item a {
   list-style-type: none;
   letter-spacing: 0.02em;
@@ -111,7 +136,6 @@
   font-size: 12px;
   line-height: 16px;
   cursor: pointer;
-  padding: 31px 20px;
 
   @media (min-width: @tablet-width) {
     &--current::before {

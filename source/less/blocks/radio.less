@@ -1,5 +1,13 @@
 .radio__list {
-  padding-top: 23px;
+  padding-top: 19px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 15px;
+  }
 }
 
 .radio__title {
@@ -7,10 +15,16 @@
   font-size: 16px;
   line-height: 24px;
   color: @base-black;
-  padding-top: 100px;
+  padding-top: 99px;
 
   @media (min-width: @tablet-width) {
     padding: 0;
+    margin-left: 5px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-top: 20px;
+    margin-left: 20px;
   }
 }
 
@@ -24,8 +38,25 @@
 }
 
 .radio__item {
-  padding-bottom: 23px;
+  padding-bottom: 20px;
   vertical-align: middle;
+  padding-top: 1px;
+
+  @media (min-width: @tablet-width) {
+    margin-left: 5px;
+
+    &:nth-child(1) {
+      padding-bottom: 19px;
+    }
+
+    &:nth-child(2) {
+      padding-bottom: 19px;
+    }
+
+    &:nth-child(3) {
+      padding-bottom: 18px;
+    }
+  }
 }
 
 .radio__input {

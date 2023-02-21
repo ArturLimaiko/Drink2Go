@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: 1fr;
   padding-bottom: 36px;
-  gap: 20px;
   padding-top: 20px;
 
   @media (min-width: @tablet-width) {
@@ -14,6 +13,7 @@
   @media (min-width: @desktop-width) {
     display: flex;
     flex-direction: column;
+    width: 318px;
   }
 }
 
@@ -49,14 +49,17 @@
   align-items: center;
   gap: 24px;
   justify-content: center;
+  padding-top: 16px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;
-    gap: 18px;
+    gap: 0;
     grid-column: 1/4;
   }
 
   @media (min-width: @desktop-width) {
-    gap: 16px;
+    padding-top: 21px;
+    margin-right: -41px;
+    gap: 19px;
   }
 }

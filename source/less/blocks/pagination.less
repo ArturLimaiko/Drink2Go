@@ -1,17 +1,26 @@
 .pagination {
   display: flex;
-  justify-content: space-between;
   padding-top: 40px;
 
   @media (min-width: @tablet-width) {
     justify-content: flex-end;
-    gap: 30px;
     padding-bottom: 70px;
+    padding-top: 70px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 101px;
+    padding-top: 59px;
   }
 }
 
 .pagination__list {
   display: inherit;
+  gap: 17px;
+
+  @media (min-width: @desktop-width) {
+    gap: 26px;
+  }
 }
 
 .pagination__button {
@@ -68,8 +77,17 @@
   }
 }
 
+.pagination__back {
+  margin-right: 19px;
+
+  @media (min-width: @tablet-width) {
+    margin-right: 20px;
+  }
+}
+
 .pagination__up {
   rotate: calc(180deg);
+  margin-left: 19px;
 
   @media (min-width: @tablet-width) {
     rotate: none;

@@ -1,7 +1,7 @@
 .sort-filter {
   @media (min-width: @desktop-width) {
-    padding-bottom: 91px;
-    padding-top: 25px;
+    padding-bottom: 82px;
+    padding-top: 0;
   }
 }
 
@@ -9,6 +9,16 @@
   position: absolute;
   top: 40px;
   display: flex;
+
+  @media (min-width: @tablet-width) {
+    top: 34px;
+    left: 6px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: 34px;
+    left: 20px;
+  }
 }
 
 .sort-filter__text {
@@ -16,11 +26,19 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
-  margin-bottom: 34px;
+  margin-bottom: 33px;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    margin: 0 0 9px 33px;
+  }
 
   @media (min-width: @desktop-width) {
     width: 318px;
+    margin: 0;
+    margin-top: 20px;
+    margin-bottom: 32px;
+    margin-left: 20px;
   }
 }
 
@@ -68,7 +86,7 @@
   font-family: @accent-font;
   font-weight: 500;
   font-size: 16px;
-  line-height: 24px;
+  line-height: 17px;
   text-align: center;
 
   @media (min-width: @tablet-width) {
@@ -82,7 +100,7 @@
 
 .sort-filter__dash {
   font-size: 30px;
-  margin: 10px 17px 0;
+  margin: 6px 17px 0;
   color: @base-grey;
 
   @media (min-width: @tablet-width) {
@@ -115,15 +133,17 @@
 .sort-filter__bar {
   position: absolute;
   height: 4px;
-  width: 228px;
+  width: 236px;
   background: @primary-lighter;
 
   @media (min-width: @tablet-width) {
-    width: 189px;
+    width: 176px;
+    left: 27px;
   }
 
   @media (min-width: @desktop-width) {
     width: 274px;
+    top: 93px;
   }
 }
 
@@ -189,9 +209,24 @@
 .sort-filter__toggle--toggle-min {
   top: -10px;
   left: -1px;
+
+  @media (min-width: @tablet-width) {
+    top: -14px;
+    left: -1px;
+  }
+
+  @media (min-width: @desktop-width) {
+    top: -10px;
+    left: -7px;
+  }
 }
 
 .sort-filter__toggle--toggle-max {
-  top: -10px;
-  right: -22px;
+  top: -12px;
+  right: -24px;
+
+  @media (min-width: @desktop-width) {
+    top: -10px;
+    right: -17px;
+  }
 }
