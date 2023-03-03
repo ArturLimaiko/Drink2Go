@@ -3,11 +3,11 @@
   background-color: @lightest-grey;
 
   @media (min-width: @tablet-width) {
-    padding: 80px 20px 20px;
+    padding: 80px var(--side-offset) 20px;
   }
 
   @media (min-width: @desktop-width) {
-    padding: 100px 20px 20px;
+    padding: 100px var(--side-offset) 20px;
   }
 }
 
@@ -34,6 +34,7 @@
   font-size: 24px;
   line-height: 36px;
   color: @base-black;
+  text-align: center;
 
   @media (min-width: @tablet-width) {
     font-weight: 700;
